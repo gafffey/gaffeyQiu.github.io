@@ -1,3 +1,32 @@
 theme: fluid  # 指定主题
 
 language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
+
+force_https: true
+
+footer:
+  statistics:
+    enable: true
+    source: "busuanzi"  # 可选 leancloud | busuanzi  根据自己需求选择
+    pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    uv_format: "总访客数 {} 人"
+
+post:
+  comments:
+    enable: true
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
+    type: gitalk
+gitalk:
+  clientID: fe7603abf1bc86b894d6
+  clientSecret: 79e80e88ac02d66f776ce35ab255a101044bfacd
+  repo: issue
+  owner: gaffeyQiu
+  admin: ['gaffeyQiu']
+  language: zh-CN
+  labels: ['Gitalk']
+  perPage: 10
+  pagerDirection: last
+  distractionFreeMode: false
+  createIssueManually: true
